@@ -43,6 +43,8 @@ abstract class Service implements ServiceInterface
     protected $languagePool = self::LANGUAGE_POOL_RN;
 
     /**
+     * HTTP transport.
+     *
      * @var ClientInterface
      */
     protected $transport;
@@ -53,9 +55,12 @@ abstract class Service implements ServiceInterface
     protected $credentials;
 
     /**
+     * Your application ID in Anticaptcha catalog.
+     * The value `857` is ID of this library. Set in 0 if you want to turn off sending any ID.
+     *
      * @var int
      */
-    protected $softId;
+    protected $softId = 857;
 
     /**
      * Service constructor.
