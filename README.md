@@ -11,13 +11,13 @@ or
 ```php
 "require": {
   ...
-  "gladyshev/anticaptcha-client": "dev-master"
+  "gladyshev/anticaptcha-client": "*"
   ...
 }
 ```
 
 ### Examples
-More example in [examples](/examples) folder.
+More examples in [examples](/examples) folder.
 
 ```php
 $client = new \Anticaptcha\Client('YOUR_API_KEY', ['languagePool' => 'en']));
@@ -33,10 +33,10 @@ var_dump($result->getSolution()->getText()); // string(14) "замочка"
 
 Option | Type | Default | Description 
 ---| --- | --- | ---
-`language` | string | 'en' | Error messages language
-`languagePool`| string | 'rn' | Sets workers pool language. At the moment the following language pools are available:  en (default) : English language queue  rn  : group of countries: Russia, Ukraine, Belarus, Kazahstan
+`language` | string | null | Error messages language (null - English)
+`languagePool`| string | 'rn' | Sets workers pool language. At the moment the following language pools are available: en (default) : English language queue rn : group of countries: Russia, Ukraine, Belarus, Kazahstan
 `serverUrl`| string	| 'https://api.anti-captcha.com' | Anti-captcha API URL 
 `transport` | \GuzzleHttp\ClientInterface | — | Guzzle library HTTP client, set you own configured client for debug issues or logging for example 
-`credentials` | \Anticaptcha\CredentialsInterface | — | Credentials object now contain API key only
+`credentials` | \Anticaptcha\CredentialsInterface | — | Credentials object contains API key only
 
 The library strictly follows the API documentation, so full features can be found by looking at the [official documentation](https://anticaptcha.atlassian.net/wiki/spaces/API/pages/196635/Documentation+in+English) of the service.

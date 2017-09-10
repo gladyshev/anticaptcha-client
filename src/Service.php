@@ -30,7 +30,7 @@ abstract class Service implements ServiceInterface
     /**
      * @var string
      */
-    public static $language = Language::RU;
+    public static $language;
 
     /**
      * @var string
