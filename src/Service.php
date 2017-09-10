@@ -24,6 +24,9 @@ use GuzzleHttp\Psr7\Response;
  */
 abstract class Service implements ServiceInterface
 {
+    const LANGUAGE_POOL_RN = 'rn';
+    const LANGUAGE_POOL_EN = 'en';
+
     /**
      * @var string
      */
@@ -37,7 +40,7 @@ abstract class Service implements ServiceInterface
     /**
      * @var string
      */
-    protected $languagePool = Language::POOL_RN;
+    protected $languagePool = self::LANGUAGE_POOL_RN;
 
     /**
      * @var ClientInterface

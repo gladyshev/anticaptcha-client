@@ -13,9 +13,6 @@ namespace Anticaptcha\Language;
  */
 class Language
 {
-    const POOL_RN = 'rn';
-    const POOL_EN = 'en';
-
     /* Available translations */
     const RU = 'ru_RU';
 
