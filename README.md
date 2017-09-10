@@ -35,7 +35,7 @@ Option | Type | Default | Description
 ---| --- | --- | ---
 `language` | string | 'en' | Error messages language
 `languagePool`| string | 'rn' | Sets workers pool language. At the moment the following language pools are available:  en (default) : English language queue  rn  : group of countries: Russia, Ukraine, Belarus, Kazahstan
-`serverUrl`| string	| 'https://api.anti-captcha.com | Anti-captcha API URL 
+`serverUrl`| string	| 'https://api.anti-captcha.com' | Anti-captcha API URL 
 `transport` | \GuzzleHttp\ClientInterface | — | Guzzle library HTTP client, set you own configured client for debug issues or logging for example 
 `credentials` | \Anticaptcha\CredentialsInterface | — | Credentials object now contain API key only
 
