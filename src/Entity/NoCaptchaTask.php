@@ -46,7 +46,7 @@ class NoCaptchaTask extends NoCaptchaTaskProxyless
      *
      * @var int
      */
-    protected  $proxyPort;
+    protected $proxyPort;
 
     /**
      * Login for proxy which requires authorizaiton (basic).

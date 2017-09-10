@@ -9,7 +9,6 @@ use Anticaptcha\Exception\InvalidArgumentException;
 use Anticaptcha\TaskInterface;
 use function Anticaptcha\t;
 
-
 /**
  * Class NoCaptchaTaskProxyless
  *
