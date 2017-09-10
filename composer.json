@@ -1,6 +1,6 @@
 {
   "name": "gladyshev/anticaptcha-client",
-  "description": "Full featured anti-captcha.com client library",
+  "description": "Full featured anti-captcha.com client library.",
   "keywords": ["captcha", "anticaptcha", "anti-captcha"],
   "type": "library",
   "license": "MIT",
