@@ -10,7 +10,6 @@ use Anticaptcha\Entity\Result;
 use Anticaptcha\Exception\ErrorResponseException;
 use Anticaptcha\Exception\InvalidArgumentException;
 use Anticaptcha\Exception\TransportException;
-use Anticaptcha\Language\Language;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
