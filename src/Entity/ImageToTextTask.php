@@ -84,6 +84,19 @@ class ImageToTextTask extends Entity implements TaskInterface
         $options['body'] = base64_encode(file_get_contents($path));
         return new static($options);
     }
+    /**
+     * From Base64 task builder.
+     *
+     * @param string $string      # Base64 string
+     * @param array $options      # Recognition options
+     * @return static
+     * @throws InvalidArgumentException
+     */
+    public static function fromBase64($string, array $options = [])
+    {
+        $options['body'] = $string;
+        return new static($options);
+    }
 
     /**
      * ImageToTextTask constructor.
