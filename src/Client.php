@@ -18,6 +18,14 @@ use Anticaptcha\Entity\Result;
 class Client extends Service
 {
     /**
+     * @param string $string # base64 to resolve
+     * @return int
+     */
+    public function createTaskByBase64($string)
+    {
+        return $this->createTask(ImageToTextTask::fromBase64($string));
+    }
+    /**
      * @param string $link  # Path or URL of image to resolve
      * @return int
      */
