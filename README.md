@@ -49,4 +49,4 @@ array(2) {
 */
 ```
 
-The library strictly follows the API documentation, so full features can be found by looking at the [official documentation](https://anticaptcha.atlassian.net/wiki/spaces/API/pages/196635/Documentation+in+English) of the service.
+The library strictly follows the API documentation, so full features can be found by looking at the [official documentation](https://anti-captcha.com/apidoc) of the service.
