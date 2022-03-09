@@ -14,9 +14,9 @@ $client = new \Anticaptcha\Client(
     $httpClient
 );
 
-$result = $client->resolveImage(__DIR__.'/data/yandex.gif');
+$createResult = $client->createTaskByImage(__DIR__ . '/data/yandex.gif');
 
-var_dump(
-    $result->getTaskId(),
-    $result->solution
-);
+$getTaskResult = $client->getTaskResult($createResult->getTaskId());
+$getTaskResult->wait();
+
+var_dump($getTaskResult->solution); // string(14) "замочка"

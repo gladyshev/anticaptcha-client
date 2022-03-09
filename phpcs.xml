@@ -1,30 +1,24 @@
 <?xml version="1.0"?>
-<ruleset name="Anticaptcha library coding standards">
-    <description>Anticaptcha library coding standards</description>
+<ruleset name="Library coding standards">
+    <description>Coding standards</description>
 
     <!-- display progress -->
     <arg value="p"/>
     <arg name="colors"/>
 
-    <!-- inherit rules from: PSR-2 -->
-    <rule ref="PSR2">
+    <!-- inherit rules from: PSR-12 -->
+    <rule ref="PSR12">
+        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock" />
         <exclude name="PSR1.Classes.ClassDeclaration"/>
         <exclude name="PSR1.Files.SideEffects"/>
         <exclude name="Squiz.WhiteSpace.SuperfluousWhitespace"/>
-    </rule>
-
-    <rule ref="Generic.Files.LineLength">
-        <properties>
-            <property name="lineLimit" value="120"/>
-            <property name="absoluteLineLimit" value="120"/>
-        </properties>
-        <exclude-pattern>functions.php</exclude-pattern>
+        <exclude name="Generic.Files.LineLength"/>
     </rule>
 
     <!-- Paths to check -->
     <file>src</file>
-    <file>examples</file>
 
     <!-- Exclude -->
-    <exclude-pattern>Language/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/tests/*</exclude-pattern>
 </ruleset>

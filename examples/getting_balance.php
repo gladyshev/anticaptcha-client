@@ -1,12 +1,14 @@
 <?php
-/**
- * @project Anticaptcha library
- */
+
+use Anticaptcha\Configuration;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$client = new \Anticaptcha\Client(getenv('__ANTICAPTCHA_KEY__'));
+$client = new \Anticaptcha\Client(
+    new Configuration(getenv('__ANTICAPTCHA_KEY__')),
+    new GuzzleHttp\Client()
+);
 
-$balance = $client->getBalance();
+$balanceResult = $client->getBalance();
 
-var_dump($balance);
+var_dump($balanceResult);

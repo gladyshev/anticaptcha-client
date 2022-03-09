@@ -7,8 +7,6 @@ $client = new \Anticaptcha\Client(
     new GuzzleHttp\Client()
 );
 
-$stats = $client->getQueueStats(
-    \Anticaptcha\Enum\QueueId::IMAGE_TO_TEXT_RL
-);
+$stats = $client->getSpendingStats();
 
 var_dump($stats);
