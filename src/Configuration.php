@@ -4,6 +4,8 @@ namespace Anticaptcha;
 
 final class Configuration implements ConfigurationInterface
 {
+    public const DEFAULT_API_URL = 'https://api.anti-captcha.com';
+
     private string $apiKey;
     private string $apiUrl;
     private ?string $languagePool;
@@ -11,7 +13,7 @@ final class Configuration implements ConfigurationInterface
 
     public function __construct(
         string $clientKey,
-        string $apiUrl = 'https://api.anti-captcha.com',
+        string $apiUrl = self::DEFAULT_API_URL,
         ?string $languagePool = null,
         ?string $callbackUrl = null
     ) {

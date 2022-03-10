@@ -30,23 +30,23 @@ abstract class AbstractResponse extends Entity
     public string $errorDescription = '';
 
     /**
-     * @param ResponseInterface $response
+     * @param ResponseInterface $httpResponse
      *
      * @return $this
      *
      * @throws Exception
      */
-    public static function fromHttpResponse(ResponseInterface $response): self
+    public static function fromHttpResponse(ResponseInterface $httpResponse): self
     {
         $properties = json_decode(
-            $response->getBody()->__toString(),
+            $httpResponse->getBody()->__toString(),
             true,
             JSON_THROW_ON_ERROR
         );
 
         if (!is_array($properties)) {
             throw new RuntimeException(
-                sprintf('Unexpected API response. Dump: %s', var_export($response, true))
+                sprintf('Unexpected API response. Dump: %s', var_export($httpResponse, true))
             );
         }
 
@@ -55,7 +55,7 @@ abstract class AbstractResponse extends Entity
 
     public function hasError(): bool
     {
-        return $this->errorId > 1;
+        return $this->errorId > 0;
     }
 
     public function getErrorId(): int

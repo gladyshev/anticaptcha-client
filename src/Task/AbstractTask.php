@@ -8,7 +8,12 @@ use ReflectionProperty;
 
 abstract class AbstractTask extends Entity
 {
-    abstract public function getType(): string;
+    public function getType(): string
+    {
+        $parts = explode('\\', static::class);
+
+        return end($parts);
+    }
 
     public function toArray(): array
     {

@@ -35,7 +35,7 @@ $client = new \Anticaptcha\Client(
     $httpClient
 );
 
-$result = $client->resolveImage(__DIR__.'/data/yandex.gif');
+$result = $client->resolveImage(__DIR__.'/data/captcha.png');
 
 var_dump($result->solution);
 

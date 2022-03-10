@@ -1,13 +1,10 @@
-check-all: lint cs psalm test
+check-all: lint cs test
 
 cs:
 	composer cs-check
 
 cs-fix:
 	composer cs-fix
-
-psalm:
-	composer psalm
 
 lint:
 	composer lint

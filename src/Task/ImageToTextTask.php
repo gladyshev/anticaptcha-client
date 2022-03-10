@@ -86,9 +86,4 @@ class ImageToTextTask extends AbstractTask
 
         return new static($options);
     }
-
-    public function getType(): string
-    {
-        return 'ImageToTextTask';
-    }
 }

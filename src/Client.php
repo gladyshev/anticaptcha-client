@@ -424,13 +424,13 @@ final class Client
 
     /**
      * @param string $uri
-     * @param array $params
+     * @param array $payload
      *
      * @return RequestInterface
      *
      * @throws JsonException
      */
-    private function createRequest(string $uri, array $params = []): RequestInterface
+    private function createRequest(string $uri, array $payload = []): RequestInterface
     {
         return new Request(
             'POST',
@@ -438,7 +438,7 @@ final class Client
             [
                 'Content-Type' => 'application/json'
             ],
-            json_encode($params, JSON_THROW_ON_ERROR),
+            json_encode($payload, JSON_THROW_ON_ERROR),
             '1.1'
         );
     }

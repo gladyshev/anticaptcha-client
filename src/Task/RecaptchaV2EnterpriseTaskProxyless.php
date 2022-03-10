@@ -2,7 +2,7 @@
 
 namespace Anticaptcha\Task;
 
-class RecaptchaV2EnterpriseProxylessTask extends AbstractTask
+class RecaptchaV2EnterpriseTaskProxyless extends AbstractTask
 {
     /*
      * Address of a target web page. Can be located anywhere on the web site, even in a member area. Our workers don't
@@ -36,9 +36,4 @@ class RecaptchaV2EnterpriseProxylessTask extends AbstractTask
      * are doing.
      */
     public ?string $apiDomain = null;
-
-    public function getType(): string
-    {
-        return 'RecaptchaV2EnterpriseTaskProxyless';
-    }
 }
