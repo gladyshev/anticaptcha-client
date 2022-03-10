@@ -5,22 +5,26 @@ namespace Anticaptcha;
 final class Configuration implements ConfigurationInterface
 {
     public const DEFAULT_API_URL = 'https://api.anti-captcha.com';
+    public const DEFAULT_SOFT_ID = 857;  // ID of this library
 
     private string $apiKey;
     private string $apiUrl;
     private ?string $languagePool;
     private ?string $callbackUrl;
+    private ?int $softId;
 
     public function __construct(
         string $clientKey,
         string $apiUrl = self::DEFAULT_API_URL,
         ?string $languagePool = null,
-        ?string $callbackUrl = null
+        ?string $callbackUrl = null,
+        ?int $softId = self::DEFAULT_SOFT_ID
     ) {
         $this->apiKey = $clientKey;
         $this->apiUrl = $apiUrl;
         $this->languagePool = $languagePool;
         $this->callbackUrl = $callbackUrl;
+        $this->softId = $softId;
     }
 
     public static function fromClientKey(string $clientKey): self
@@ -53,8 +57,8 @@ final class Configuration implements ConfigurationInterface
         return $this->callbackUrl;
     }
 
-    public function getSoftId(): int
+    public function getSoftId(): ?int
     {
-        return 857;
+        return $this->softId;
     }
 }
