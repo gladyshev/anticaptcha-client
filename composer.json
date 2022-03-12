@@ -42,6 +42,6 @@
     "lint": "phplint",
     "psalm": "psalm --config=psalm.xml",
     "test": "phpunit --colors=always",
-    "test-coverage": "XDEBUG_MODE=coverage phpunit --colors=always --coverage-clover ./var/phpunit/coverage.xml"
+    "test-coverage": "XDEBUG_MODE=coverage phpunit --colors=always --coverage-clover var/phpunit/coverage.xml"
   }
 }

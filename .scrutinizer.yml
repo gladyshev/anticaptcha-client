@@ -3,13 +3,19 @@ imports:
 build:
     environment:
         php: 8.0
+
     nodes:
+        analysis:
+            tests:
+                override:
+                    - php-scrutinizer-run
+                    - phpcs-run
         coverage:
             tests:
                 override:
                     - command: ./make coverage
                       coverage:
-                          file: ./var/phpunit/coverage.xml
+                          file: var/phpunit/coverage.xml
                           format: clover
 tools:
     php_sim: false
