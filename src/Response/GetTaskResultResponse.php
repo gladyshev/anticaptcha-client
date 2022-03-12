@@ -68,8 +68,8 @@ final class GetTaskResultResponse extends AbstractResponse
         }
 
         if (
-            !$this->client
-            || !$this->taskId
+            $this->client === null
+            || $this->taskId === null
         ) {
             throw new BadMethodCallException('Can\'t wait due to inconsistency.');
         }
