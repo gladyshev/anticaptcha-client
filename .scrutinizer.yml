@@ -13,7 +13,7 @@ build:
         coverage:
             tests:
                 override:
-                    - command: ./make coverage
+                    - command: composer test-coverage
                       coverage:
                           file: var/phpunit/coverage.xml
                           format: clover
