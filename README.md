@@ -4,6 +4,7 @@ Powerful and easy [anti-captcha.com](http://getcaptchasolution.com/djbj8qnktb) A
 
 [![Build Status](https://scrutinizer-ci.com/g/gladyshev/anticaptcha-client/badges/build.png?b=master)](https://scrutinizer-ci.com/g/gladyshev/anticaptcha-client/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gladyshev/anticaptcha-client/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gladyshev/anticaptcha-client/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/gladyshev/anticaptcha-client/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/gladyshev/anticaptcha-client/?branch=master)
 
 ### Install 
 
