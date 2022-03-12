@@ -1,6 +1,16 @@
 imports:
     - php
-
+build:
+    environment:
+        php: 8.0
+    nodes:
+        coverage:
+            tests:
+                override:
+                    - command: ./make coverage
+                      coverage:
+                          file: ./var/phpunit/coverage.xml
+                          format: clover
 tools:
     php_sim: false
     php_cpd: false

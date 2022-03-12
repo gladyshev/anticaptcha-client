@@ -11,3 +11,6 @@ lint:
 
 test:
 	composer test
+
+coverage:
+	composer test-coverage
